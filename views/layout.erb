@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+	<title><%= @site[:title] %></title>
+</head>
+
+<body id="top">
+
+<div id="layout_wrapper_outer">
+<div id="layout_wrapper">
+
+	<div id="layout_top">
+		
+		<div id="site_title">
+			<h1><a href="#">Sindicate <span>RB</span></a></h1>
+			<h2><%= @site[:subtitle] %></h2>
+		</div>
+
+	</div>
+
+	<div id="layout_body_outer">
+	<div id="layout_body">
+
+		<div id="navigation">
+
+			<div id="nav1">
+
+				<ul>
+					<li class="current_page_item"><a href="/">Home</a></li>
+					<li><a href="/archives">Archives</a></li>
+					<li><a href="/admin">Admin</a></li>
+					<li><a href="/guide">Theming Guide</a></li>
+				</ul>
+
+				<div class="clearer">&nbsp;</div>
+
+			</div>
+
+			<div id="nav2">
+
+				<ul>
+					<li class="current_page_item"><a href="#">First subpage</a></li>
+					<li><a href="#">Second subpage</a></li>
+					<li><a href="#">Third subpage</a></li>
+					<li><a href="#">And so on..</a></li>
+				</ul>
+
+				<div class="clearer">&nbsp;</div>
+
+			</div>
+
+		</div>
+
+		<div id="main">
+
+			<div class="left" id="content_outer">
+				<div id="content">
+					<%= yield %>
+				</div>
+			</div>
+
+			<div class="right" id="sidebar_outer">
+				<div id="sidebar">
+
+					<div class="box">
+
+						<div class="box_title">About</div>
+
+						<div class="box_content">
+							<p><%= @site[:about] %></p>
+						</div>
+
+					</div>
+
+					<div class="box">
+
+						<div class="box_title">Categories</div>
+
+						<div class="box_content">
+							<ul>
+								<li><a href="http://templates.arcsin.se/category/website-templates/">Website Templates</a></li>
+								<li><a href="http://templates.arcsin.se/category/wordpress-themes/">Wordpress Themes</a></li>
+								<li><a href="http://templates.arcsin.se/professional-templates/">Professional Templates</a></li>
+								<li><a href="http://templates.arcsin.se/category/blogger-templates/">Blogger Templates</a></li>
+								<li><a href="http://templates.arcsin.se/category/joomla-templates/">Joomla Templates</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="clearer">&nbsp;</div>
+
+		</div>
+
+		<div id="dashboard">
+			<div id="dashboard_inner">
+
+				<div class="col3 left">
+					<div class="col3_content">
+
+						<div class="col_title">Resources</div>
+						<ul>
+							<li><a href="http://www.ruby-lang.org/en/documentation/quickstart/">Ruby in 20 Minutes</a></li>
+							<li><a href="http://github.com/logankoester/sindicate/tree/master">Sindicate on GitHub</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				<div class="col3mid left">
+					<div class="col3_content">
+
+						<div class="col_title">Developers</div>
+						<ul>
+							<li><a href="#">Semper fermentum</a></li>
+							<li><a href="#">Sem justo</a></li>
+							<li><a href="#">Magna sed purus</a></li>
+							<li><a href="#">Tincidunt nisl</a></li>
+							<li><a href="#">Consequat molestie</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				<div class="col3 right">
+					<div class="col3_content">
+
+						<div class="col_title"><a href="http://hashtags.org/tag/sindicate/messages">Twitter</a></div>
+						<a href="http://twitter.com/<%= #@twitter.first.from_user %>">
+							<img style="float: left; vertical-align: middle; margin-right: 5px;" width="32" height="32" src="<%= # @twitter.first.profile_image_url %>" title="<%= #@twitter.first.from_user %>" alt="<%= # @twitter.first.from_user %>" />
+						</a>
+						<p><%= #@demo['twitter']['text'] %></p>
+						<p style="text-align: right;"><a href="http://hashtags.org/tag/sindicate/messages">View more...</a></p>
+					</div>
+				</div>
+
+				<div class="clearer">&nbsp;</div>
+
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+	<div id="footer">
+
+		<div class="left">
+			<%= @site[:copyright] %>
+		</div>
+		<div class="right">
+			<a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a> 
+		</div>
+		
+		<div class="clearer">&nbsp;</div>
+
+	</div>
+
+</div>
+</div>
+
+</body>
+</html>

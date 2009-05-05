@@ -1,0 +1,20 @@
+<h3>Creating a new theme</h3>
+<p>You can use these <a href="http://www.modruby.net/en/index.rbx/eruby/whatis.html" title="eRuby">erb</a> template tags to insert Sindicate content in your theme.</p>
+
+<h5>Site tags</h5>
+<br />
+<table class="data_table">
+	<thead>
+		<th>Tag</th>
+		<th>Renders</th>
+	</thead>
+	<tbody>
+		<% @site.each do |tag| %>
+			<tr>
+				<td>&lt;%= @site[:<strong><%= tag[0] %></strong>] %&gt;</td>
+				<td><em><%= tag[1] %></em></td>
+			</tr>
+		<% end %>
+
+	</tbody>
+</table>
